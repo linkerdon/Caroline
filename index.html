@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ar" dir="ltr">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -61,6 +61,167 @@
         }
         
         .links-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        
+        .link-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            padding: 16px 20px;
+            background-color: white;
+            border-radius: 12px;
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+            font-size: 18px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        
+        .link-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+            border-color: #e0e0e0;
+        }
+        
+        .youtube:hover {
+            color: #FF0000;
+            border-color: #FF0000;
+        }
+        
+        .instagram:hover {
+            color: #E1306C;
+            border-color: #E1306C;
+        }
+        
+        .snapchat:hover {
+            color: #FFFC00;
+            border-color: #FFFC00;
+        }
+        
+        .tiktok:hover {
+            color: #000000;
+            border-color: #000000;
+        }
+        
+        .facebook:hover {
+            color: #1877F2;
+            border-color: #1877F2;
+        }
+        
+        .icon {
+            font-size: 24px;
+            width: 30px;
+            text-align: center;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            color: #95a5a6;
+            font-size: 14px;
+            width: 100%;
+        }
+        
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 10px;
+            font-size: 20px;
+        }
+        
+        .social-icons a {
+            color: #7f8c8d;
+            transition: color 0.3s;
+        }
+        
+        .social-icons a:hover {
+            color: #3498db;
+        }
+        
+        @media (max-width: 600px) {
+            .container {
+                padding: 0 15px;
+            }
+            
+            .profile-img {
+                width: 130px;
+                height: 130px;
+            }
+            
+            .profile-name {
+                font-size: 24px;
+            }
+            
+            .link-button {
+                padding: 14px 18px;
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="profile-section">
+            <img src="https://i.imgur.com/ihfoAw4.jpeg" alt="Caroline Florstad" class="profile-img" id="profileImg">
+            <h1 class="profile-name">Caroline Florstad</h1>
+            <p class="profile-description">Creative content on social media platforms. Follow me on all platforms!</p>
+        </div>
+        
+        <div class="links-container">
+            <a href="https://youtube.com/@caroline-florstad?si=17A11xO6IM2arlsO" target="_blank" class="link-button youtube">
+                <div class="icon"><i class="fab fa-youtube"></i></div>
+                <span>YouTube</span>
+            </a>
+            
+            <a href="https://www.instagram.com/joridchaz?igsh=OGRneTN1bHduNGI5" target="_blank" class="link-button instagram">
+                <div class="icon"><i class="fab fa-instagram"></i></div>
+                <span>Instagram</span>
+            </a>
+            
+            <a href="https://www.snapchat.com/@joridchaz?sender_web_id=979d28e0-e197-4b69-a9cc-7e52fe408d00&device_type=android&is_copy_url=true" target="_blank" class="link-button snapchat">
+                <div class="icon"><i class="fab fa-snapchat-ghost"></i></div>
+                <span>Snapchat</span>
+            </a>
+            
+            <a href="https://www.tiktok.com/@carolinedz?_r=1&_t=ZS-92lKtkQsMz6" target="_blank" class="link-button tiktok">
+                <div class="icon"><i class="fab fa-tiktok"></i></div>
+                <span>TikTok</span>
+            </a>
+            
+            <a href="https://www.facebook.com/carolineflorstad" target="_blank" class="link-button facebook">
+                <div class="icon"><i class="fab fa-facebook"></i></div>
+                <span>Facebook</span>
+            </a>
+        </div>
+        
+        <div class="footer">
+            <p>© 2023 Caroline Florstad. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/joridchaz?igsh=OGRneTN1bHduNGI5" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://youtube.com/@caroline-florstad?si=17A11xO6IM2arlsO" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a href="https://www.tiktok.com/@carolinedz?_r=1&_t=ZS-92lKtkQsMz6" target="_blank"><i class="fab fa-tiktok"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Ensure the profile image loads correctly
+        document.getElementById('profileImg').onerror = function() {
+            this.src = 'https://images.unsplash.com/photo-1494790108755-2616c113a1c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80';
+        };
+    </script>
+</body>
+</html>        .links-container {
             display: flex;
             flex-direction: column;
             gap: 15px;
