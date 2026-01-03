@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ar" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caroline Florstad | Linktree</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        
+        .profile-section {
+            text-align: center;
+            padding: 25px 0;
+            margin-bottom: 20px;
+        }
+        
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid white;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        
+        .profile-name {
+            font-size: 28px;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 8px;
+        }
+        
+        .profile-description {
+            font-size: 16px;
+            color: #7f8c8d;
+            max-width: 80%;
+            margin: 0 auto 20px;
+        }
+        
+        .links-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        
+        .link-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            padding: 16px 20px;
+            background-color: white;
+            border-radius: 12px;
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+            font-size: 18px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        
+        .link-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+            border-color: #e0e0e0;
+        }
+        
+        .youtube:hover {
+            color: #FF0000;
+            border-color: #FF0000;
+        }
+        
+        .instagram:hover {
+            color: #E1306C;
+            border-color: #E1306C;
+        }
+        
+        .snapchat:hover {
+            color: #FFFC00;
+            border-color: #FFFC00;
+        }
+        
+        .tiktok:hover {
+            color: #000000;
+            border-color: #000000;
+        }
+        
+        .facebook:hover {
+            color: #1877F2;
+            border-color: #1877F2;
+        }
+        
+        .icon {
+            font-size: 24px;
+            width: 30px;
+            text-align: center;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            color: #95a5a6;
+            font-size: 14px;
+            width: 100%;
+        }
+        
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 10px;
+            font-size: 20px;
+        }
+        
+        .social-icons a {
+            color: #7f8c8d;
+            transition: color 0.3s;
+        }
+        
+        .social-icons a:hover {
+            color: #3498db;
+        }
+        
+        @media (max-width: 600px) {
+            .container {
+                padding: 0 15px;
+            }
+            
+            .profile-img {
+                width: 130px;
+                height: 130px;
+            }
+            
+            .profile-name {
+                font-size: 24px;
+            }
+            
+            .link-button {
+                padding: 14px 18px;
+                font-size: 16px;
+            }
+        }
+        
+        .language-toggle {
+            margin-top: 15px;
+        }
+        
+        .language-toggle button {
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background 0.3s;
+        }
+        
+        .language-toggle button:hover {
+            background: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="profile-section">
+            <img src="https://i.imgur.com/ihfoAw4.jpeg" alt="Caroline Florstad" class="profile-img" id="profileImg">
+            <h1 class="profile-name" id="profileName">Caroline Florstad</h1>
+            <p class="profile-description" id="profileDescription">محتوى إبداعي على منصات التواصل الاجتماعي. تابعني على جميع المنصات!</p>
+            
+            <div class="language-toggle">
+                <button onclick="toggleLanguage()">English / العربية</button>
+            </div>
+        </div>
+        
+        <div class="links-container">
+            <a href="https://youtube.com/@caroline-florstad?si=17A11xO6IM2arlsO" target="_blank" class="link-button youtube">
+                <div class="icon"><i class="fab fa-youtube"></i></div>
+                <span id="youtubeText">YouTube</span>
+            </a>
+            
+            <a href="https://www.instagram.com/joridchaz?igsh=OGRneTN1bHduNGI5" target="_blank" class="link-button instagram">
+                <div class="icon"><i class="fab fa-instagram"></i></div>
+                <span id="instagramText">Instagram</span>
+            </a>
+            
+            <a href="https://www.snapchat.com/@joridchaz?sender_web_id=979d28e0-e197-4b69-a9cc-7e52fe408d00&device_type=android&is_copy_url=true" target="_blank" class="link-button snapchat">
+                <div class="icon"><i class="fab fa-snapchat-ghost"></i></div>
+                <span id="snapchatText">Snapchat</span>
+            </a>
+            
+            <a href="https://www.tiktok.com/@carolinedz?_r=1&_t=ZS-92lKtkQsMz6" target="_blank" class="link-button tiktok">
+                <div class="icon"><i class="fab fa-tiktok"></i></div>
+                <span id="tiktokText">TikTok</span>
+            </a>
+            
+            <a href="https://www.facebook.com/carolineflorstad" target="_blank" class="link-button facebook">
+                <div class="icon"><i class="fab fa-facebook"></i></div>
+                <span id="facebookText">Facebook</span>
+            </a>
+        </div>
+        
+        <div class="footer">
+            <p id="footerText">© 2023 Caroline Florstad. جميع الحقوق محفوظة.</p>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/joridchaz?igsh=OGRneTN1bHduNGI5" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://youtube.com/@caroline-florstad?si=17A11xO6IM2arlsO" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a href="https://www.tiktok.com/@carolinedz?_r=1&_t=ZS-92lKtkQsMz6" target="_blank"><i class="fab fa-tiktok"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // بيانات ثنائية اللغة
+        const content = {
+            ar: {
+                name: "كارولين فلورستاد",
+                description: "محتوى إبداعي على منصات التواصل الاجتماعي. تابعني على جميع المنصات!",
+                youtube: "يوتيوب",
+                instagram: "إنستغرام",
+                snapchat: "سناب شات",
+                tiktok: "تيك توك",
+                facebook: "فيسبوك",
+                footer: "© 2023 كارولين فلورستاد. جميع الحقوق محفوظة."
+            },
+            en: {
+                name: "Caroline Florstad",
+                description: "Creative content on social media platforms. Follow me on all platforms!",
+                youtube: "YouTube",
+                instagram: "Instagram",
+                snapchat: "Snapchat",
+                tiktok: "TikTok",
+                facebook: "Facebook",
+                footer: "© 2023 Caroline Florstad. All rights reserved."
+            }
+        };
+        
+        // اللغة الافتراضية
+        let currentLang = 'ar';
+        
+        // تبديل اللغة
+        function toggleLanguage() {
+            currentLang = currentLang === 'ar' ? 'en' : 'ar';
+            updateContent();
+            
+            // تغيير اتجاه النص
+            document.documentElement.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
+            document.documentElement.lang = currentLang;
+        }
+        
+        // تحديث المحتوى حسب اللغة
+        function updateContent() {
+            document.getElementById('profileName').textContent = content[currentLang].name;
+            document.getElementById('profileDescription').textContent = content[currentLang].description;
+            document.getElementById('youtubeText').textContent = content[currentLang].youtube;
+            document.getElementById('instagramText').textContent = content[currentLang].instagram;
+            document.getElementById('snapchatText').textContent = content[currentLang].snapchat;
+            document.getElementById('tiktokText').textContent = content[currentLang].tiktok;
+            document.getElementById('facebookText').textContent = content[currentLang].facebook;
+            document.getElementById('footerText').textContent = content[currentLang].footer;
+        }
+        
+        // التأكد من تحميل الصورة بشكل صحيح
+        document.getElementById('profileImg').onerror = function() {
+            this.src = 'https://images.unsplash.com/photo-1494790108755-2616c113a1c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80';
+        };
+        
+        // تهيئة اللغة عند التحميل
+        document.addEventListener('DOMContentLoaded', function() {
+            updateContent();
+        });
+    </script>
+</body>
+</html>
